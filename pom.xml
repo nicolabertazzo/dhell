@@ -5,8 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>eu.stamp-project.examples</groupId>
-  <artifactId>hello_app</artifactId>
+  <artifactId>dhell</artifactId>
   <version>1.2.1</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>dhell-code</module>
+    <module>dhell-tests</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,15 +29,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>eu.stamp-project</groupId>
-        <artifactId>pitmp-maven-plugin</artifactId>
-        <version>1.3.4</version>
-        <configuration>
-          <mutationEngine>descartes</mutationEngine>
-        </configuration>
-      </plugin>
-
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.0.0</version>
