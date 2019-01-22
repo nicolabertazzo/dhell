@@ -33,7 +33,9 @@ pipeline {
     }
     stage('Amplify') {
       steps {
-       dspot(showReports: true)
+       withEnv(['MAVEN_HOME=/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/maven3']) {
+          dspot(showReports: true)
+       }
       }
     }
   }
